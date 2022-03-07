@@ -16,6 +16,10 @@ class Astronomy
         space.Add(new Planet("Jupiter"));
         space.Add(new Moon("Moon"));
 
+        space.Add(new Comet("Halley's "));
+        space.Add(new Asteroid("Vesta"));
+        space.Add(new DwarfPlanet("Pluto"));
+
         foreach (SpaceObject obj in space)
         {
             obj.Draw();
