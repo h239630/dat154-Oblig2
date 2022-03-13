@@ -4,13 +4,13 @@ namespace SpaceSim
 {
     public class SpaceObject
     {
-        protected String name;
-        protected int radius;           // Size of object 
-        protected String color;         // Simple description of objects color
-        protected int orbital_Radius;   // Circular orbit radius for sake of simplicity
-        protected int orbital_Period;   // Length of year
-        protected int rotation;         // Length of day
-        
+        public String name          { get; set; }
+        public int radius           { get; set; }         // Size of object 
+        public String color         { get; set; }         // Simple description of objects color
+        public int orbital_Radius   { get; set; }         // Circular orbit radius for sake of simplicity
+        public int orbital_Period   { get; set; }         // Length of year
+        public int rotation         { get; set; }         // Length of day
+
 
         public SpaceObject(String _name, int _radius, String _color, int _orbital_Radius, int _orbital_Period, int _rotation)
         {
@@ -20,6 +20,12 @@ namespace SpaceSim
             orbital_Radius = _orbital_Radius;
             orbital_Period = _orbital_Period;
             rotation = _rotation;
+        }
+
+        public int position(int time)
+        {
+
+            return time * orbital_Period;
         }
 
         public virtual void Draw()
